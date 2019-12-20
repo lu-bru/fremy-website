@@ -1,0 +1,84 @@
+<header>
+	<nav class="nav-admin">
+		<a href="/"><img class="logo" src="/img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar-admin">
+			<ul class="navbar-links navbar-links-admin">
+			<li class="navlink">
+				<a href="#">Pedidos</a>
+			</li>
+			<li class="navlink">
+				<a href="/admin/listaproductos">Productos</a>
+			</li>
+			<li class="navlink">
+				<a class="active" href="/admin/listausuarios">Usuarios</a>
+			</li>
+			</ul>
+			<div class="nav-buttons admin-logout">
+				<a href="../logout" class="btn btn-blue btn-logout">Cerrar sesión</a>
+			</div>
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<div class="admin-title-add">
+			<h1 class="admin-h1">Usuarios</h1>
+		</div>
+		<div class="container">
+			<div class="admin-main">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="admin-table-id-u">Id</th>
+							<th class="admin-table-th">
+								<div class="th-overflow-u">Nombre</div>
+							</th>
+							<th class="admin-table-th">
+								<div class="th-overflow-u">Apellido</div>
+							</th>
+							<th class="admin-table-th">
+								<div class="th-overflow-u">Mail</div>
+							</th>
+							<th class="admin-table-th">
+								<div class="th-overflow-u">Contraseña</div>
+							</th>
+							<th class="admin-table-th">
+								<div class="th-overflow-u">Fecha de registro</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+                        {{#each data}}
+						<tr>
+							<td>{{id}}</td>
+							<td>
+								<div class="td-overflow-u">{{nombre}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-u">{{apellido}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-u">{{mail}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-u">{{password}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-u">{{registro}}</div>
+							</td>
+						</tr>
+                        {{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

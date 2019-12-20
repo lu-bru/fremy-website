@@ -1,0 +1,146 @@
+<header>
+	<nav class="nav-admin">
+		<a href="/"><img class="logo" src="/img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar-admin">
+			<ul class="navbar-links navbar-links-admin">
+				<li class="navlink">
+					<a href="#">Pedidos</a>
+				</li>
+				<li class="navlink">
+					<a class="active" href="/admin/listaproductos">Productos</a>
+				</li>
+				<li class="navlink">
+					<a href="/admin/listausuarios">Usuarios</a>
+				</li>
+			</ul>
+			<div class="nav-buttons admin-logout">
+				<a href="../logout" class="btn btn-blue btn-logout">Cerrar sesión</a>
+			</div>
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<div class="overlay-nuevo-producto">
+			<div class="nuevo-producto">
+			<h2 class="title-pink padding-top-4">Nuevo producto</h2>
+				<form class="producto-form" action="/admin/listaproductos" method="post" enctype="multipart/form-data">
+					<div class="n-producto-nombre">
+						<label class="producto-categoria" for="nombre">
+							<h4>Nombre</h4>
+						</label>
+						<input class="n-producto-input" type="text" name="nombre" required>
+					</div>
+					<div class="n-producto-desc">
+						<label class="producto-categoria" for="descripcion">
+							<h4>Descripción</h4>
+						</label>
+						<input class="n-producto-input" type="text" name="descripcion" required>
+					</div>
+					<div class="n-producto-ing">
+						<label class="producto-categoria" for="ingredientes">
+							<h4>Ingredientes</h4>
+						</label>
+						<input class="n-producto-input" type="text" name="ingredientes" required>
+					</div>
+					<div class="n-producto-precio">
+						<label class="producto-categoria" for="precio">
+							<h4>Precio</h4>
+						</label>
+						<input class="n-producto-input" type="number" name="precio" required>
+					</div>
+					<div class="n-producto-categoria">
+						<label class="producto-categoria" for="categoria">
+							<h4>Categoría</h4>
+						</label>
+						<input class="n-producto-input" type="text" name="categoria" required>
+					</div>
+					<div class="n-producto-img">
+						<label class="producto-categoria" for="img">
+							<h4>Imagen</h4>
+						</label>
+						<input class="n-producto-input" type="file" name="img">
+					</div>
+					<div class="perfil-buttons">
+						<a href="#" class="btn-leave" id="leave-add-overlay">Cancelar</a>
+						<input type="submit" value="Añadir producto">
+					</div>
+				</form>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="admin-title-add">
+			<h1 class="admin-h1">Productos</h1>
+			<button class="add-admin-button">
+				<img class="add-admin-icon" src="/img/add.svg" alt="Añadir producto icono">
+			</button>
+		</div>
+		<div class="container">
+			<div class="admin-main">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="admin-table-id-p">Id</th>
+							<th>
+								<div class="th-overflow-p">Nombre</div>
+							</th>
+							<th>
+								<div class="th-overflow-p">Descripción</div>
+							</th>
+							<th>
+								<div class="th-overflow-p">Ingredientes</div>
+							</th>
+							<th>
+								<div class="th-overflow-p">Precio</div>
+							</th>
+							<th>
+								<div class="th-overflow-p">Categoría</div>
+							</th>
+							<th>
+								<div class="th-overflow-p">Imagen</div>
+							</th>
+							<th class="admin-table-icon"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each data}}
+						<tr>
+							<td>{{id}}</td>
+							<td>
+								<div class="td-overflow-p">{{nombre}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-p">{{descripcion}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-p">{{ingredientes}}</div>
+							</td>
+							<td>{{precio}}</td>
+							<td>
+								<div class="td-overflow-p">{{categoria}}</div>
+							</td>
+							<td>
+								<div class="td-overflow-p"><img class="td-product-img"src="/img/{{img}}"></div>
+							</td>
+							<td>
+								<a href="/admin/listaproductos/editar/{{id}}">
+									<img class="edit-admin-icon" src="/img/edit.svg" alt="Botón para editar">
+								</a>
+							</td>
+						</tr>
+						{{/each}}					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

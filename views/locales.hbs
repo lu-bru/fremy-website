@@ -1,0 +1,325 @@
+<header>
+	<nav>
+		<a href="/"><img class="logo" src="/img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar">
+			<ul class="navbar-links">
+				<li class="navlink">
+					<a class="active" href="/locales">Locales</a>
+				</li>
+				<li class="navlink">
+					<a href="/tienda">Tienda Online</a>
+				</li>
+				<li class="navlink">
+					<a href="/faq">Preguntas Frecuentes</a>
+				</li>
+			</ul>
+			{{#if isLogged}}
+			{{#if isUser}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/carrito" class="btn btn-blue">Carrito</a>
+			</div>
+			{{/if}}
+			{{#if isAdmin}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/admin" class="btn btn-blue">Admin</a>
+			</div>
+			{{/if}}
+			{{else}}
+			<div class="nav-buttons">
+				<a href="/login" class="btn btn-orange">Ingresar</a>
+				<a href="/registro" class="btn btn-blue">Registrarme</a>
+			</div>
+			{{/if}}
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<iframe class="local-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367118373!2d-58.50333852760864!3d-34.61566245749198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1572390757689!5m2!1ses-419!2sar"frameborder="0" style="border:0;" allowfullscreen></iframe>
+		<h2 class="title-pink">Locales</h2>
+		<div class="container local-card-grid padding-bottom-8">
+			<div class="local-card">
+				<h3>Palermo I</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Palermo Uno 1234</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0001</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Palermo II</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Palermo Dos 5678</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0002</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">8:00 - 19:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Flores</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Flores 1234</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0003</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 20:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Villa Urquiza</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Villa Urquiza 3456</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0004</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Villa Crespo</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Crespo 6789</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0005</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Nuñez</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Nuñez 234</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0006</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">11:00 - 22:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Almagro</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Almagro 20</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0007</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 19:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Microcentro</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Microcentro 2345</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0008</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Recoleta</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av.Recoleta 456</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0009</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Belgrano I</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Belgrano Uno 6789</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0010</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Belgrano II</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Belgrano Dos 3456</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0011</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 20:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Retiro</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Retiro 8912</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0012</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">8:00 - 19:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Caballito</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Caballito 456</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-00013</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Mataderos</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Mataderos 1234</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0014</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 22:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Colegiales</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Colegiales 2345</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0015</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">10:00 - 22:00</p>
+					</span>
+				</div>
+			</div>
+			<div class="local-card">
+				<h3>Devoto</h3>
+				<div class="local-datos-container">
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/location.svg" alt="Location icon">
+						<p class="local-datos">Av. Devoto 567</p>
+					</span>
+					<span class="local-datos-individual">
+						<img class="local-icon" src="/img/phone.svg" alt="Phone icon">
+						<p class="local-datos">4000-0016</p>
+					</span>
+					<span class="local-datos-individual-m0">
+						<img class="local-icon" src="/img/clock.svg" alt="Clock icon">
+						<p class="local-datos">9:00 - 21:00</p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

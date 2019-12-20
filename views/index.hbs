@@ -1,0 +1,126 @@
+<header>
+	<nav>
+		<a href="/"><img class="logo" src="img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar">
+			<ul class="navbar-links">
+				<li class="navlink">
+					<a href="/locales">Locales</a>
+				</li>
+				<li class="navlink">
+					<a href="/tienda">Tienda Online</a>
+				</li>
+				<li class="navlink">
+					<a href="/faq">Preguntas Frecuentes</a>
+				</li>
+			</ul>
+			{{#if isLogged}}
+			{{#if isUser}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/carrito" class="btn btn-blue">Carrito</a>
+			</div>
+			{{/if}}
+			{{#if isAdmin}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/admin" class="btn btn-blue">Admin</a>
+			</div>
+			{{/if}}
+			{{else}}
+			<div class="nav-buttons">
+				<a href="/login" class="btn btn-orange">Ingresar</a>
+				<a href="/registro" class="btn btn-blue">Registrarme</a>
+			</div>
+			{{/if}}
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<div class="index-hero">
+			<div class="hero-text-box">
+				<h1>¡Nueva colección de donas!</h1>
+				<h3>Ya disponible en nuestra tienda online</h3>
+				<a class="btn-main-blue" href="/tienda/donas">¡Pedilas!</a>
+			</div>
+		</div>
+	</article>
+	<article>
+		<h2 class="title-pink">Los más pedidos</h2>
+		<div class="container product-card-grid">
+		{{#each data}}
+		<div class="product-card">
+		<img class="product-card-img" src="/img/{{img}}" alt="{{nombre}}">
+		<div class="product-card-info">
+			<h4>{{nombre}}</h4>
+			<p>${{precio}}</p>
+			<a href="/tienda/{{categoria}}/{{id}}" class="vermas">Ver más</a>
+		</div>
+		</div>
+		{{/each}}
+		</div>
+	</article>
+	<article>
+		<h2 class="title-pink mobile">Estamos cerca tuyo</h2>
+		<div class="container cercatuyo">
+			<img class="local-img" src="img/local_foto-sm.jpg" alt="Foto de local">
+			<div class="cercatuyo-bottom">
+				<h2 class="title-pink desktop">Estamos cerca tuyo</h2>
+				<p>Desde hace 10 años estamos presentes en la Ciudad Autónoma de Buenos Aires. ¡Te esperamos en nuestros 16 locales!</p>
+				<a class="btn-main-outline" href="locales">Locales</a>
+			</div>
+		</div>
+	</article>
+	<article>
+		<div class="container newsletter">
+			<div class="newsletter-text-box">
+				<h2 class="title-newsletter">¡Subscribite para recibir cupones todos los meses!</h2>
+			</div>
+			<form class="newsletter-form" action="/subscripcion" method="post">
+				<input type="email" name="mail" placeholder="E-mail">
+				<input type="submit" value="Subscribirme">
+			</form>
+		</div>
+	</article>
+	<article>
+		<div class="container contacto">
+			<div class="contacto-text-box">
+				<h2 class="title-pink">Contactanos</h2>
+			</div>
+			<form class="contacto-form" action="/" method="post">
+				<input type="text" name="nombre" placeholder="Nombre" required>
+				<input type="email" name="mail" placeholder="E-mail" required>
+				<textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+				<p>{{message}}</p>
+				<input type="submit" value="Enviar">
+			</form>
+			<div class="social-icons-sm">
+				<a href="#"><img src="img/facebook.svg" alt="Facebook icono"></a>
+				<a href="#"><img src="img/instagram.svg" alt="Instagram icono"></a>
+				<a href="#"><img src="img/linkedin.svg" alt="Linkedin icono"></a>
+			</div>
+			<div class="social-icons-lg">
+				<a href="#">
+					<img src="img/facebook.svg" alt="Facebook icono">
+					<p>/Fremy.dulceria</p>
+				</a>
+				<a href="#">
+					<img src="img/instagram.svg" alt="Instagram icono">
+					<p>/Fremy.dulceria</p>
+				</a>
+				<a href="#">
+					<img src="img/linkedin.svg" alt="Linkedin icono">
+					<p>/Fremy.argentina</p>
+				</a>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

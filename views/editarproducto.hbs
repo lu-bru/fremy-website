@@ -1,0 +1,52 @@
+<article>
+	{{#each data}}
+	<div class="overlay-editar-producto">
+		<div class="editar-producto">
+			<h2 class="title-pink padding-top-4">Editar producto</h2>
+			<form class="producto-form" action="/editarproducto/{{id}}" method="post" enctype="multipart/form-data">
+				<div class="n-producto-nombre">
+					<label class="producto-categoria" for="nombre">
+						<h4>Nombre</h4>
+					</label>
+					<input class="n-producto-input" type="text" name="nombre" value="{{nombre}}" required>
+				</div>
+				<div class="n-producto-desc">
+					<label class="producto-categoria" for="descripcion">
+						<h4>Descripción</h4>
+					</label>
+					<input class="n-producto-input" type="text" name="descripcion" value="{{descripcion}}" required>
+				</div>
+				<div class="n-producto-ing">
+					<label class="producto-categoria" for="ingredientes">
+						<h4>Ingredientes</h4>
+					</label>
+					<input class="n-producto-input" type="text" name="ingredientes" value="{{ingredientes}}" required>	
+				</div>
+				<div class="n-producto-precio">
+					<label class="producto-categoria" for="precio">
+						<h4>Precio</h4>
+					</label>
+					<input class="n-producto-input" type="number" name="precio" value="{{precio}}" required>
+				</div>
+				<div class="n-producto-categoria">
+					<label class="producto-categoria" for="categoria">
+						<h4>Categoría</h4>
+					</label>
+					<input class="n-producto-input" type="text" name="categoria" value="{{categoria}}" required>
+				</div>
+				<div class="n-producto-img">
+					<label class="producto-categoria" for="img">
+						<h4>Imagen</h4>
+					</label>
+					<input class="n-producto-input" type="file" name="img" value="{{img}}">
+				</div>
+				<div class="perfil-buttons">
+					<a href="/admin/listaproductos" class="btn-leave">Volver</a>
+					<a href="/eliminarproducto/{{id}}" class="btn-delete-product">Eliminar producto</a>
+					<input type="submit" value="Editar producto">
+				</div>
+			</form>
+		</div>
+	</div>
+	{{/each}}
+</article>

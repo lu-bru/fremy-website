@@ -1,0 +1,166 @@
+<header>
+	<nav>
+		<a href="/"><img class="logo" src="/img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar">
+			<ul class="navbar-links">
+				<li class="navlink">
+					<a href="/locales">Locales</a>
+				</li>
+				<li class="navlink">
+					<a href="/tienda">Tienda Online</a>
+				</li>
+				<li class="navlink">
+					<a href="/faq">Preguntas Frecuentes</a>
+				</li>
+			</ul>
+			{{#if isLogged}}
+			{{#if isUser}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/carrito" class="btn btn-blue">Carrito</a>
+			</div>
+			{{/if}}
+			{{#if isAdmin}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/admin" class="btn btn-blue">Admin</a>
+			</div>
+			{{/if}}
+			{{else}}
+			<div class="nav-buttons">
+				<a href="/login" class="btn btn-orange">Ingresar</a>
+				<a href="/registro" class="btn btn-blue">Registrarme</a>
+			</div>
+			{{/if}}
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<h2 class="title-pink">Carrito</h2>
+		<div class="container">
+			<div class="carrito-main">
+				<table class="table table-carrito">
+					<thead>
+						<tr>
+							<th class="carrito-table-img">Producto</th>
+							<th>
+							</th>
+							<th>
+								<div>Cantidad</div>
+							</th>
+							<th>
+								<div>Precio</div>
+							</th>
+							<th class="carrito-table-icon"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/dona-azucarada-sm.jpg" alt="Dona de azucarada"></td>
+							<td>
+								<div>Dona azucarada</div>
+							</td>
+							<td>
+								<div class="td-overflow">5</div>
+							</td>
+							<td>
+								<div class="td-overflow">$250</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/dona-frutilla-sm.jpg" alt="Dona de frutilla rellena"></td>
+							<td>
+								<div>Dona de frutilla rellena</div>
+							</td>
+							<td>
+								<div class="td-overflow">5</div>
+							</td>
+							<td>
+								<div class="td-overflow">$250</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/dona-limon-sm.jpg" alt="Dona de limón"></td>
+							<td>
+								<div>Dona de limón</div>
+							</td>
+							<td>
+								<div class="td-overflow">5</div>
+							</td>
+							<td>
+								<div class="td-overflow">$250</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/dona-nuez-sm.jpg" alt="Dona de nuez moscada"></td>
+							<td>
+								<div>Dona de nuez moscada</div>
+							</td>
+							<td>
+								<div class="td-overflow">5</div>
+							</td>
+							<td>
+								<div class="td-overflow">$250</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/helado-banana-sm.jpg" alt="Helado de banana"></td>
+							<td>
+								<div>Helado de banana</div>
+							</td>
+							<td>
+								<div class="td-overflow">2</div>
+							</td>
+							<td>
+								<div class="td-overflow">$120</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+						<tr>
+							<td><img class="carrito-product-img" src="/img/helado-frutilla-sm.jpg" alt="Helado de frutilla"></td>
+							<td>
+								<div>Helado de frutilla</div>
+							</td>
+							<td>
+								<div class="td-overflow">2</div>
+							</td>
+							<td>
+								<div class="td-overflow">$120</div>
+							</td>
+							<td>
+								<button><img class="edit-admin-icon" src="/img/delete.svg" alt="Botón para editar"></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Total: $1240</h3>
+			</div>
+			<div class="container-btn-comenzar-compra">
+				<a href="#" class="btn-comenzar-compra">Comenzar compra</a>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

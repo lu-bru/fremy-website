@@ -1,0 +1,51 @@
+<header>
+	<nav>
+		<a href="/"><img class="logo" src="img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar">
+			<ul class="navbar-links">
+				<li class="navlink">
+					<a href="/locales">Locales</a>
+				</li>
+				<li class="navlink">
+					<a href="/tienda">Tienda Online</a>
+				</li>
+				<li class="navlink">
+					<a href="/faq">Preguntas Frecuentes</a>
+				</li>
+			</ul>
+			{{#if isLogged}}
+			{{#if isUser}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/carrito" class="btn btn-blue">Carrito</a>
+			</div>
+			{{/if}}
+			{{#if isAdmin}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/admin" class="btn btn-blue">Admin</a>
+			</div>
+			{{/if}}
+			{{else}}
+			<div class="nav-buttons">
+				<a href="/login" class="btn btn-orange">Ingresar</a>
+				<a href="/registro" class="btn btn-blue">Registrarme</a>
+			</div>
+			{{/if}}
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<div class="message">
+		<h2>{{message}}</h2>
+		<a href="/" class="btn-leave">Volver</a>
+	</div>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>

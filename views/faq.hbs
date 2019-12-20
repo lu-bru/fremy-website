@@ -1,0 +1,100 @@
+<header>
+	<nav>
+		<a href="/"><img class="logo" src="/img/logo.svg" alt="Fremy Dulcería logo"></a>
+		<div class="navbar">
+			<ul class="navbar-links">
+				<li class="navlink">
+					<a href="locales">Locales</a>
+				</li>
+				<li class="navlink">
+					<a href="tienda">Tienda Online</a>
+				</li>
+				<li class="navlink">
+					<a class="active" href="faq">Preguntas Frecuentes</a>
+				</li>
+			</ul>
+			{{#if isLogged}}
+			{{#if isUser}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/carrito" class="btn btn-blue">Carrito</a>
+			</div>
+			{{/if}}
+			{{#if isAdmin}}
+			<div class="nav-buttons">
+				<a href="/perfil" class="btn btn-orange">Perfil</a>
+				<a href="/admin" class="btn btn-blue">Admin</a>
+			</div>
+			{{/if}}
+			{{else}}
+			<div class="nav-buttons">
+				<a href="/login" class="btn btn-orange">Ingresar</a>
+				<a href="/registro" class="btn btn-blue">Registrarme</a>
+			</div>
+			{{/if}}
+		</div>
+		<div class="burger">
+			<div class="burger-ani line1"></div>
+			<div class="burger-ani line2"></div>
+			<div class="burger-ani line3"></div>
+		</div>
+	</nav>
+</header>
+<main>
+	<article>
+		<h2 class="title-pink">Preguntas frecuentes</h2>
+		<div class="faq container padding-bottom-8 margin-top-2">
+			<button class="accordion">¿Quienes somos?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga maiores, dolore nulla! Iusto dicta illum quaerat fuga quibusdam odio facilis ipsum ipsa recusandae delectus distinctio, sunt optio laborum ex voluptate!</p>
+			</div>
+			<button class="accordion">¿Cómo puedo realizar una compra online?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim molestias non iusto quis ab doloribus temporibus quisquam esse similique eos ad fuga ducimus blanditiis nobis, ut sint quaerat voluptatum provident rem doloremque, possimus error. Dolore iure deleniti nostrum repellat!</p>
+			</div>
+			<button class="accordion">¿Qué métodos de pago aceptan?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloremque sequi ducimus. Tenetur, consectetur architecto fugit totam sed eligendi dolores ad. Tempore deserunt magnam, delectus atque quisquam ipsum distinctio corporis doloribus, corrupti, excepturi iusto odio at consequatur obcaecati eos itaque aperiam ducimus nobis reprehenderit voluptatem!</p>
+			</div>
+			<button class="accordion">¿Cuánto tiempo suele tardar en llegar el pedido?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quod corporis rerum voluptate. Fugiat!</p>
+			</div>
+			<button class="accordion">¿El menú es igual en los locales y en la tienda online?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis rem minima sunt ducimus illo error, exercitationem laboriosam possimus totam dolorum eligendi veniam enim laudantium amet.</p>
+			</div>
+			<button class="accordion">¿Cómo puedo hacer un reclamo?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita impedit temporibus voluptate dolorum obcaecati libero ipsa ipsam similique perferendis quis atque molestiae veniam debitis eum dicta animi nobis reiciendis, eos neque quae aperiam eaque porro?</p>
+			</div>
+			<button class="accordion">¿Hacen envíos fuera de la Ciudad de Buenos Aires?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quis, ad, quae aperiam maiores, accusantium, dignissimos odit iste velit animi impedit cumque quisquam officiis excepturi nostrum labore placeat iusto perferendis laudantium. Molestiae excepturi exercitationem aut corrupti! Tempore sunt ipsam, cumque quidem. Explicabo obcaecati maiores autem, saepe molestiae adipisci omnis architecto iusto error totam non libero.</p>
+			</div>
+			<button class="accordion">¿Puedo hacer un pedido para más tarde?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<button class="accordion">¿Por qué hay un límite de productos que puedo pedir?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est praesentium quidem suscipit eveniet iusto blanditiis rem perferendis, doloremque excepturi reprehenderit, vitae mollitia unde accusamus nobis dolorum aperiam laborum! Sed cum nulla debitis voluptatibus repellendus asperiores amet aliquid delectus porro quia.</p>
+			</div>
+			<button class="accordion">¿Cuáles productos son aptos para veganos?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati quidem, cum praesentium placeat unde sit, tenetur non, molestiae maxime totam sed. Neque soluta eum natus, itaque aliquam temporibus molestiae aliquid quia, iste cum ex repellendus, deleniti odit expedita iusto ducimus, quibusdam nihil quae fugit! Minus perferendis sit, fuga saepe.</p>
+			</div>
+			<button class="accordion">Me gustaría trabajar en Fremy, ¿cómo puedo enviar mi CV?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non laudantium repellat repudiandae et nisi vel facere aspernatur adipisci, perspiciatis modi omnis quo eligendi dolore iure odit officia mollitia saepe sunt.</p>
+			</div>
+			<button class="accordion">Un producto que solía pedir ya no aparece en el sitio, ¿por qué?</button>
+			<div class="panel">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ducimus tempore cumque nostrum eos fugiat natus sed, accusamus aut sequi beatae esse, commodi placeat, dolor? Ut vitae eos provident, accusantium exercitationem corporis. Suscipit rerum deserunt cumque unde nisi, ipsam! Possimus.</p>
+			</div>
+		</div>
+	</article>
+</main>
+<footer>
+	<p class="footer-text">Fremy Dulcería 2019. Diseño por <a href="https://github.com/lu-bru">lu-bru.</a></p>
+</footer>
